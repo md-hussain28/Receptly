@@ -68,7 +68,7 @@ const MinimalHero = () => {
   const currentConfig = cardConfigs[currentCard];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-100 via-pink-50 to-purple-100 w-full overflow-hidden max-w-screen relative">
+    <div className="min-h-screen bg-linear-to-br from-purple-100 via-pink-50 to-purple-100 w-full overflow-hidden max-w-screen relative">
       {/* Floating Navigation */}
       <div className="absolute top-6 left-1/2 transform -translate-x-1/2 z-50">
         <nav 
@@ -186,7 +186,7 @@ const MinimalHero = () => {
                     <div className="space-y-3">
                       {/* Chat Item 1 */}
                       <button className="w-full flex items-center space-x-3 p-3 bg-white/30 rounded-xl hover:bg-white/40 transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-white/60">
-                        <div className="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center flex-shrink-0" aria-hidden="true">
+                        <div className="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center shrink-0" aria-hidden="true">
                           <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
                           </svg>
@@ -200,7 +200,7 @@ const MinimalHero = () => {
 
                       {/* Chat Item 2 */}
                       <button className="w-full flex items-center space-x-3 p-3 bg-white/30 rounded-xl hover:bg-white/40 transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-white/60">
-                        <div className="w-8 h-8 bg-purple-500 rounded-lg flex items-center justify-center flex-shrink-0" aria-hidden="true">
+                        <div className="w-8 h-8 bg-purple-500 rounded-lg flex items-center justify-center shrink-0" aria-hidden="true">
                           <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                           </svg>
@@ -231,7 +231,7 @@ const MinimalHero = () => {
                         {/* Workflow Nodes */}
                         <div className="flex items-center space-x-2">
                           {/* Trigger Node */}
-                          <div className="z-10 flex-shrink-0">
+                          <div className="z-10 shrink-0">
                             <div className="w-12 h-12 rounded-xl bg-blue-500 flex items-center justify-center mb-2 shadow-lg" aria-label="Webhook trigger">
                               <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -241,12 +241,12 @@ const MinimalHero = () => {
                           </div>
 
                           {/* Connection */}
-                          <div className="z-0 flex-1 h-0.5 bg-white/30 relative min-w-[40px]">
+                          <div className="z-0 flex-1 h-0.5 bg-white/30 relative min-w-10">
                             <div className="absolute -top-1 right-0 w-3 h-3 rounded-full bg-blue-400 animate-ping"></div>
                           </div>
 
                           {/* AI Node */}
-                          <div className="z-10 flex-shrink-0">
+                          <div className="z-10 shrink-0">
                             <div className="w-12 h-12 rounded-xl bg-purple-500 flex items-center justify-center mb-2 shadow-lg" aria-label="AI processor">
                               <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M12 21v-1m-3.364-3.364l-.707-.707m2.828-2.828l.707-.707M11 13H7a4 4 0 00-4 4v2a2 2 0 002 2h14a2 2 0 002-2v-2a4 4 0 00-4-4h-4z" />
@@ -256,12 +256,12 @@ const MinimalHero = () => {
                           </div>
 
                           {/* Connection */}
-                          <div className="z-0 flex-1 h-0.5 bg-white/30 relative min-w-[40px]">
+                          <div className="z-0 flex-1 h-0.5 bg-white/30 relative min-w-10">
                             <div className="absolute -top-1 right-0 w-3 h-3 rounded-full bg-purple-400 animate-ping"></div>
                           </div>
 
                           {/* Output Node */}
-                          <div className="z-10 flex-shrink-0">
+                          <div className="z-10 shrink-0">
                             <div className="w-12 h-12 rounded-xl bg-green-500 flex items-center justify-center mb-2 shadow-lg" aria-label="Output">
                               <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -297,7 +297,7 @@ const MinimalHero = () => {
                         </div>
                         <div className="w-full bg-white/30 rounded-full h-2.5" role="progressbar" aria-valuenow={28.56} aria-valuemin={0} aria-valuemax={100} aria-label="Token usage">
                           <div 
-                            className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full transition-all duration-500"
+                            className="bg-linear-to-r from-green-400 to-blue-500 h-2.5 rounded-full transition-all duration-500"
                             style={{ width: '28.56%' }}
                           ></div>
                         </div>
